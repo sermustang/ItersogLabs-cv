@@ -1,0 +1,24 @@
+$text-color: #282828;
+$link-color: #2b54b1;
+
+@mixin transition($rule: all, $time: 0.3s) {
+	transition: $rule $time;
+}
+
+@mixin clearfix() {
+	&:after {
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		clear: both;
+	}
+}
+
+@mixin link() {
+	color: $link-color;
+	@include transition();
+	&:hover {
+		color: #5792b8;
+	}
+}
