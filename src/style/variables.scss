@@ -1,5 +1,8 @@
 $text-color: #282828;
 $link-color: #2b54b1;
+$link-hover-color: #5792b8;
+$media-smartphone: 767px;
+$media-tablet-desktop: 768px;
 
 @mixin transition($rule: all, $time: 0.3s) {
 	transition: $rule $time;
@@ -19,6 +22,6 @@ $link-color: #2b54b1;
 	color: $link-color;
 	@include transition();
 	&:hover {
-		color: #5792b8;
+		color: $link-hover-color;
 	}
 }

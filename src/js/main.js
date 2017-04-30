@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Hiding list elements and adding toggle button if necessary.
  * Toggling fade of hidden elements with more/less button.
  */
@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var j = 0; j < hiddenItems.length; j++) {
         var item = hiddenItems[j];
 
+        // Adding style to hidden list items to use in variable 'visibility' in moreLess() function
         item.style.display = 'none';
     }
 
+    // Fading in/out list items
     function moreLess() {
         var btnSwitcher = this,
             target = this.closest('.list-items').querySelector('.hidden-items'),
@@ -69,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, step);
         }
     }
-
+	
     function hideListItems(quantityVisible) {
         var lists = document.querySelectorAll('.list-items');
 
